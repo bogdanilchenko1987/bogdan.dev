@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV — One Page Scroll</title>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+      .section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        /* min-height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal {
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(100%);
+      }
+      .modal.open {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="text-gray-900 font-sans relative">
+    <!-- Header -->
+    <header class="py-4">
+      <div class="container mx-auto px-16 sm:px-4 text-center">
+        <a
+          href="/"
+          class="text-lg cursor-pointer relative before:absolute before:bg-green-300 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.35] hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500"
+        >
+          <span class="relative">bogdan.dev</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="flex items-center justify-center">
+      <form
+        action="https://formspree.io/f/mdkgvonq"
+        method="POST"
+        class="relative border-8 border-green-800 p-6 rounded-lg grid gap-8 md:flex-1 md:max-w-lg my-4 md:my-12 lg:my-16 bg-white dark:bg-neutral-800 w-full"
+      >
+        <p class="text-lg font-semibold underline">I'm open for a new job!</p>
+        <h2 id="contact" class="text-3xl font-bold">Let's Connect</h2>
+
+        <!-- Name Field -->
+        <div class="relative">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="peer w-full py-2 border-4 border-grey-900 rounded-md focus:ring-2 dark:focus:ring-offset-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent"
+          />
+          <label
+            for="name"
+            class="text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"
+            >Your Name</label
+          >
+        </div>
+
+        <!-- Email Field -->
+        <div class="relative">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            class="peer w-full py-2 border-4 border-grey-900 rounded-md focus:ring-2 dark:focus:ring-offset-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent"
+          />
+          <label
+            for="email"
+            class="text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"
+            >Your Email</label
+          >
+        </div>
+
+        <!-- Message Field -->
+        <div class="relative">
+          <textarea
+            name="message"
+            id="content"
+            cols="20"
+            rows="5"
+            placeholder="Offer me a job?"
+            required
+            class="peer form-textarea resize-none w-full border-4 border-grey-900 rounded-md focus:ring-2 dark:focus:ring-offset-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent"
+          ></textarea>
+          <label
+            for="content"
+            class="text-neutral-500 text-sm font-bold uppercase absolute -top-3 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-6 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"
+            >Offer me a job?</label
+          >
+        </div>
+        <input
+          type="hidden"
+          name="_redirect"
+          value="http://127.0.0.1:5501/thanks/"
+        />
+
+        <!-- ТУТ ТРЕБА ЗМІНИТИ НА ДОМЕН -->
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="inline-flex items-center rounded cursor-pointer bg-green-600 py-2 px-6 w-max font-semibold text-white transition [box-shadow:rgb(171,245,183)-8px_8px] hover:[box-shadow:rgb(171,245,183)0px_0px]"
+        >
+          Send →
+        </button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10">
+      <div class="container mx-auto px-16 sm:px-4 text-center">
+        <div class="space-x-6">
+          <a href="#" id="cookiesLink" class="text-grey-600">cookies</a>
+          <a href="#" id="privacyLink" class="text-grey-600">privacy</a>
+          <a href="#" id="termsLink" class="text-grey-600">terms</a>
+        </div>
+        <p class="mt-4 text-gray-500">© 2025 mysite.com</p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      id="legalModal"
+      class="modal fixed inset-0 bg-white flex justify-center items-center z-50"
+    >
+      <div class="bg-white w-full max-w-4xl p-8 overflow-y-auto">
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-xl text-gray-500"
+        >
+          x
+        </button>
+        <div id="modalContent">
+          <!-- Content will change based on the link clicked -->
+          <h2 class="text-2xl font-bold mb-4">Cookies Policy</h2>
+          <p>This is where we would describe our Cookies Policy.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cookiesLink = document.getElementById("cookiesLink");
+      const privacyLink = document.getElementById("privacyLink");
+      const termsLink = document.getElementById("termsLink");
+      const modal = document.getElementById("legalModal");
+      const closeModal = document.getElementById("closeModal");
+      const modalContent = document.getElementById("modalContent");
+
+      cookiesLink.addEventListener("click", () => {
+        modal.classList.add("open");
+        modalContent.innerHTML = `
+          <h2 class="text-2xl font-bold mb-4">Cookies Policy</h2>
+          <p class="mb-4">This Cookies Policy explains how our website uses cookies to enhance the user experience. Cookies are small pieces of data stored on your device that help us analyze how visitors use our website. By continuing to browse, you agree to our use of cookies.</p>
+          <h3 class="text-xl font-semibold mb-2">What are Cookies?</h3>
+          <p class="mb-4">Cookies are small files that are stored on your device when you visit a website. They can be used to improve your browsing experience by remembering your preferences, tracking usage, and personalizing content and ads.</p>
+          <h3 class="text-xl font-semibold mb-2">How We Use Cookies</h3>
+          <p class="mb-4">We use cookies for the following purposes:
+            <ul class="list-disc pl-5">
+              <li>To personalize your experience on our website.</li>
+              <li>To analyze website traffic and usage patterns.</li>
+              <li>To serve personalized content and ads.</li>
+            </ul>
+          </p>
+          <h3 class="text-xl font-semibold mb-2">Managing Cookies</h3>
+          <p class="mb-4">You can manage your cookie preferences through your browser settings. However, please note that disabling certain cookies may impact your experience on our website.</p>
+        `;
+      });
+
+      privacyLink.addEventListener("click", () => {
+        modal.classList.add("open");
+        modalContent.innerHTML = `
+          <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
+          <p>This is where we would describe our Privacy Policy.</p>
+        `;
+      });
+
+      termsLink.addEventListener("click", () => {
+        modal.classList.add("open");
+        modalContent.innerHTML = `
+          <h2 class="text-2xl font-bold mb-4">Terms and Conditions</h2>
+          <p>This is where we would describe our Terms and Conditions.</p>
+        `;
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.classList.remove("open");
+      });
+
+      // Close modal when clicking outside of it
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

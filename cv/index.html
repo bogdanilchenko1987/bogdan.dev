@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/dev-logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="description"
+      content="This website created by Bogdan Ilchenko - React FrontEnd Developer"
+    />
+    <meta
+      name="keywords"
+      content="FrontEnd Developer, FrontEnd, Development, website, react, javascript"
+    />
+    <title>FrontEnd Developer CV | bogdan.dev</title>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+      .title-font {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        /* min-height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal {
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(100%);
+      }
+      .modal.open {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="text-gray-900 font-sans relative">
+    <!-- Header -->
+    <header class="py-2">
+      <div class="container mx-auto px-16 sm:px-4 text-center">
+        <a
+          href="/"
+          class="cursor-pointer relative before:absolute before:bg-green-300 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.35] hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500"
+        >
+          <span class="relative title-font uppercase">bogdan.dev</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Навігація -->
+      <nav
+        class="fixed top-1/2 -translate-y-1/2 left-6 z-50 space-y-4 text-lg font-semibold"
+      >
+        <a href="#summary" class="block text-gray-500 hover:text-green-700"
+          >Summary</a
+        >
+        <a href="#skills" class="block text-gray-500 hover:text-green-700"
+          >Skills</a
+        >
+        <a href="#languages" class="block text-gray-500 hover:text-green-700"
+          >Languages</a
+        >
+        <a href="#experience" class="block text-gray-500 hover:text-green-700"
+          >Experience</a
+        >
+        <a href="#education" class="block text-gray-500 hover:text-green-700"
+          >Education</a
+        >
+        <a href="#download" class="block text-gray-500 hover:text-green-700"
+          >Download</a
+        >
+      </nav>
+
+      <!-- Секція: Summary -->
+      <section id="summary" class="section px-6" data-aos="fade-up">
+        <div class="max-w-3xl text-center">
+          <h1 class="text-4xl font-bold mb-6">
+            <span
+              class="text-green-700 mx-1 font-extrabold text-4xl relative inline-block stroke-current"
+            >
+              SUMMARY
+              <svg
+                class="absolute -bottom-0.5 w-full max-h-1.5"
+                viewBox="0 0 55 5"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </span>
+          </h1>
+          <p class="text-gray-900 leading-relaxed text-lg">
+            I am a Junior Front-End developer with knowledge of HTML, CSS,
+            JavaScript and React. <br />
+            After graduating from the Kyiv Polytechnic Institute, I started to
+            work in web sites optimization. My experience in web sites seo helps
+            me a lot in understanding how web sites and applications work.
+            <br />
+            Now I want to look into this from the other side, learn how to
+            correctly and efficiently develop sites and applications. <br />
+            In 2023 I passed the "Fullstack Developer" course from IT School
+            GoIT. After that, I did an internship as a Junior Front-end
+            developer in a commercial project. <br />
+            Currently I work as a Front-End developer at Pixoram, where I use
+            JavaScript, HTML5/CSS3, and the React stack to develop the front-end
+            of websites. I'm looking for a job where I could join a motivated
+            team to help them and expand my experience. <br />
+            I am a fast learner, responsible and always up for a challenge.
+          </p>
+        </div>
+      </section>
+
+      <!-- Секція: Skills -->
+      <section
+        id="skills"
+        class="section bg-gray-800 px-6 py-12"
+        data-aos="fade-up"
+      >
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8 text-indigo-400">
+            <span
+              class="text-green-700 mx-1 font-extrabold text-4xl relative inline-block stroke-current"
+            >
+              SKILLS
+              <svg
+                class="absolute -bottom-0.5 w-full max-h-1.5"
+                viewBox="0 0 55 5"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </span>
+          </h2>
+
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-6 place-items-center">
+            <!-- SKILL ITEM -->
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/html.svg"
+                alt="HTML"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/css.svg"
+                alt="css"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/sass.svg"
+                alt="sass"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/js.svg"
+                alt="js"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/react.svg"
+                alt="react"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/redux.svg"
+                alt="redux"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/zustand.svg"
+                alt="zustand"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/vite.svg"
+                alt="vite"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/rest-api.svg"
+                alt="rest"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/npm.svg"
+                alt="npm"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/github.svg"
+                alt="github"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/typescript.svg"
+                alt="typescript"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/next.svg"
+                alt="next"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/jest.svg"
+                alt="jest"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/wordpress.svg"
+                alt="wordpress"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/figma.svg"
+                alt="figma"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/node.svg"
+                alt="node"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/express.svg"
+                alt="express"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/mongodb.svg"
+                alt="mongodb"
+                class="w-16 h-16"
+              />
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="/assets/images/icons/php.svg"
+                alt="php"
+                class="w-16 h-16"
+              />
+            </div>
+
+            <!-- ------------------------- -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Секція: Languages -->
+      <section
+        id="languages"
+        class="section text-gray-800 px-6 py-16"
+        data-aos="fade-up"
+      >
+        <div class="max-w-xl text-center">
+          <h2 class="text-3xl font-bold mb-8 text-indigo-400">
+            <span
+              class="text-green-700 mx-1 font-extrabold text-4xl relative inline-block stroke-current uppercase"
+            >
+              Languages
+              <svg
+                class="absolute -bottom-0.5 w-full max-h-1.5"
+                viewBox="0 0 55 5"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </span>
+          </h2>
+          <ul class="space-y-3 text-lg text-gray-800">
+            <li><strong>English:</strong> Upper-Intermediate</li>
+            <li><strong>Ukrainian:</strong> Native</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Секція: Experience -->
+      <section
+        id="experience"
+        class="bg-gray-900 section text-white px-6 py-16"
+        data-aos="fade-up"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-indigo-400 text-center">
+            <span
+              class="text-green-700 mx-1 font-extrabold text-4xl relative inline-block stroke-current uppercase"
+            >
+              Experience
+              <svg
+                class="absolute -bottom-0.5 w-full max-h-1.5"
+                viewBox="0 0 55 5"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </span>
+          </h2>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 auto-rows-[minmax(150px,_auto)]"
+          >
+            <!-- Pixoram: трохи менше -->
+            <div
+              class="col-span-1 sm:col-span-2 lg:col-span-2 lg:row-span-2 transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-green-500/50 bg-gray-800 rounded-lg p-6"
+            >
+              <h3 class="text-xl font-semibold mb-2">Pixoram, Kyiv</h3>
+              <p class="text-sm text-green-500 mb-2">
+                Junior Frontend Developer | 02.2025 – Present
+              </p>
+              <ul
+                class="text-sm text-gray-300 list-disc list-inside space-y-1 mb-2"
+              >
+                <li>
+                  Creation of new web sites according to the technical task
+                  using HTML5/CSS3/JavaScript
+                </li>
+                <li>
+                  Creation of new web sites according to the technical task
+                  using React /Tailwind
+                </li>
+                <li>
+                  Creation of new web sites according to the technical task
+                  using WordPress
+                </li>
+                <li>
+                  Developing new components and blocks and upgrade existing ones
+                </li>
+                <li>Bug fixing</li>
+                <li>Plugin setup: CloudFlare, reCAPTCHA, CookieYes, etc</li>
+                <li>Support & optimization of older sites</li>
+                <li>Learning new technologies and features</li>
+              </ul>
+              <p class="text-xs text-gray-400 mt-2">
+                Stack: JavaScript, HTML5/CSS3, React, WordPress, Figma,
+                CloudFlare
+              </p>
+            </div>
+
+            <!-- 12Climb -->
+            <div
+              class="col-span-1 sm:col-span-1 lg:col-span-2 transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-green-500/50 bg-gray-800 rounded-lg p-5"
+            >
+              <h3 class="text-lg font-semibold mb-1">12Climb LLC, Kyiv</h3>
+              <p class="text-sm text-green-500 mb-1">
+                Junior Frontend Developer | 04.2024 – 02.2025
+              </p>
+              <ul class="text-sm text-gray-300 list-disc list-inside space-y-1">
+                <li>
+                  Developing new React components and enhance existing ones
+                </li>
+                <li>Bug fixing</li>
+                <li>Support and optimization web sites</li>
+                <li>Learning new technologies and features</li>
+              </ul>
+              <p class="text-xs text-gray-400 mt-2">
+                Stack: JavaScript, HTML5/CSS3, React, Git
+              </p>
+            </div>
+
+            <!-- Freelance -->
+            <div
+              class="col-span-1 sm:col-span-1 lg:col-span-2 transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-green-500/50 bg-gray-800 rounded-lg p-5"
+            >
+              <h3 class="text-lg font-semibold mb-1">Freelance</h3>
+              <p class="text-sm text-green-500 mb-1">
+                Websites Optimization | 2013 – 2022
+              </p>
+              <ul class="text-sm text-gray-300 list-disc list-inside space-y-1">
+                <li>
+                  Support and optimization web sites (Wordpress, Joomla, ets.)
+                </li>
+                <li>Link building</li>
+                <li>Preparing reports using Google Analytics</li>
+              </ul>
+            </div>
+
+            <!-- Open Source -->
+            <div
+              class="col-span-1 sm:col-span-1 lg:col-span-2 transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-green-500/50 bg-gray-800 rounded-lg p-5"
+            >
+              <h3 class="text-lg font-semibold mb-1">Open Source, Kyiv</h3>
+              <p class="text-sm text-green-500 mb-1">
+                Web Optimization | 2011 – 2013
+              </p>
+              <ul class="text-sm text-gray-300 list-disc list-inside space-y-1">
+                <li>Link building</li>
+                <li>
+                  Link buying on platforms (Sape, Blogun, Gogetlinks, Miralinks,
+                  etc.)
+                </li>
+                <li>Google AdWords campaigns settings</li>
+              </ul>
+            </div>
+
+            <!-- Web-Promo -->
+            <div
+              class="col-span-1 sm:col-span-1 lg:col-span-2 transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-green-500/50 bg-gray-800 rounded-lg p-5"
+            >
+              <h3 class="text-lg font-semibold mb-1">Web-Promo, Kyiv</h3>
+              <p class="text-sm text-green-500 mb-1">
+                SEO Specialist | 2010 – 2011
+              </p>
+              <ul class="text-sm text-gray-300 list-disc list-inside space-y-1">
+                <li>Website SEO and audit</li>
+                <li>Link buying</li>
+                <li>Preparing reports using Google Analytics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секція: Education -->
+      <section
+        id="education"
+        class="text-gray-800 section px-6 py-16"
+        data-aos="fade-up"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-indigo-400 text-center">
+            <span
+              class="text-green-700 mx-1 font-extrabold text-4xl relative inline-block stroke-current uppercase"
+            >
+              Education
+              <svg
+                class="absolute -bottom-0.5 w-full max-h-1.5"
+                viewBox="0 0 55 5"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </span>
+          </h2>
+
+          <div class="relative border-l-4 border-green-700 pl-6 space-y-10">
+            <!-- GoIT -->
+            <div class="relative group">
+              <div>
+                <h3 class="text-xl font-semibold">IT School GoIT, Kyiv</h3>
+                <p class="text-sm text-green-400">2023 – 2024</p>
+                <p class="mt-1 text-gray-700">Fullstack Developer</p>
+              </div>
+            </div>
+
+            <!-- KPI -->
+            <div class="relative group">
+              <div>
+                <h3 class="text-xl font-semibold">Igor Sikorsky KPI, Kyiv</h3>
+                <p class="text-sm text-green-400">2005 – 2011</p>
+                <p class="mt-1 text-gray-700">
+                  Master's degree – Faculty of Applied Mathematics,
+                  Engineer-Programmer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Секція: Download -->
+      <section
+        id="download"
+        class="bg-gray-900 section text-white px-6 py-16"
+        data-aos="fade-up"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-indigo-400 text-center">
+            <span
+              class="text-green-700 mx-1 font-extrabold text-4xl relative inline-block stroke-current uppercase"
+            >
+              Download
+              <svg
+                class="absolute -bottom-0.5 w-full max-h-1.5"
+                viewBox="0 0 55 5"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </span>
+          </h2>
+
+          <p class="text-lg mb-8">You can download full CV in .pdf</p>
+
+          <div class="">
+            <a
+              href="/Bogdan Ilchenko_CV.pdf"
+              download
+              class="group p-5 cursor-pointer text-center mx-auto relative text-xl font-normal border-0 flex items-center justify-center bg-transparent text-white h-auto w-[170px] overflow-hidden transition-all duration-100"
+            >
+              <span
+                class="group-hover:w-full absolute left-0 h-full w-5 border-y border-l border-green-500 transition-all duration-500"
+              >
+              </span>
+
+              <p
+                class="group-hover:opacity-0 group-hover:translate-x-[-100%] absolute translate-x-0 transition-all duration-200"
+              >
+                Download CV
+              </p>
+
+              <span
+                class="group-hover:translate-x-0 group-hover:opacity-100 absolute translate-x-full opacity-0 transition-all duration-200"
+                >Thank you!
+              </span>
+
+              <span
+                class="group-hover:w-full absolute right-0 h-full w-5 border-y border-r border-green-500 transition-all duration-500"
+              >
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="text-center">
+        <a
+          href="/projects/"
+          class="inline-flex items-center mt-6 rounded cursor-pointer bg-green-600 py-2 px-6 w-max font-semibold text-white transition [box-shadow:rgb(171,245,183)-8px_8px] hover:[box-shadow:rgb(171,245,183)0px_0px]"
+        >
+          View projects →
+        </a>
+      </div>
+
+      <script>
+        AOS.init({ duration: 800, once: true });
+      </script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-10">
+      <div class="container mx-auto px-16 sm:px-4 text-center">
+        <div class="flex items-center justify-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/bogdan-ilchenko-70286525/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/linkedin.svg"
+              alt="linkedin"
+              class="w-6 hover:scale-110"
+          /></a>
+          <a
+            href="https://github.com/bogdanilchenko1987"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/github-footer.svg"
+              alt="github"
+              class="w-6 hover:scale-110"
+          /></a>
+          <a
+            href="https://t.me/bogdan_ilchenko"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/telegram.svg"
+              alt="telegram"
+              class="w-6 hover:scale-110"
+          /></a>
+          <a
+            href="mailto:bogdan_ilchenko@ukr.net"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/email.svg"
+              alt="email"
+              class="w-8 hover:scale-110"
+          /></a>
+        </div>
+        <p class="mt-4 text-gray-500">© 2025 All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

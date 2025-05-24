@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/dev-logo.svg"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="This website created by Bogdan Ilchenko - React FrontEnd Developer"
+    />
+    <meta
+      name="keywords"
+      content="FrontEnd Developer, FrontEnd, Development, website, react, javascript"
+    />
+    <title>FrontEnd Developer website Portfolio | bogdan.dev</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .title-font {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .blinking-cursor {
+        display: inline-block;
+        width: 10px;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="py-2">
+      <div class="container mx-auto px-16 sm:px-4 text-center">
+        <a
+          href="/"
+          class="cursor-pointer relative before:absolute before:bg-green-300 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.35] hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500"
+        >
+          <span class="relative title-font uppercase">bogdan.dev</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="">
+      <div class="container mx-auto px-4 text-center">
+        <!-- Terminal Box -->
+        <div
+          class="mt-10 bg-[#0f172a] text-left text-[#10b981] font-mono rounded-lg shadow-lg p-6 max-w-3xl mx-auto overflow-y-auto"
+          style="height: 400px"
+        >
+          <pre
+            id="terminal"
+            class="whitespace-pre-wrap text-sm leading-relaxed"
+          ></pre>
+        </div>
+
+        <a
+          href="/cv/"
+          class="inline-flex items-center mt-6 rounded cursor-pointer bg-green-600 py-2 px-6 w-max font-semibold text-white transition [box-shadow:rgb(171,245,183)-8px_8px] hover:[box-shadow:rgb(171,245,183)0px_0px]"
+        >
+          View CV →
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-10">
+      <div class="container mx-auto px-16 sm:px-4 text-center">
+        <div class="flex items-center justify-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/bogdan-ilchenko-70286525/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/linkedin.svg"
+              alt="linkedin"
+              class="w-6 hover:scale-110"
+          /></a>
+          <a
+            href="https://github.com/bogdanilchenko1987"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/github-footer.svg"
+              alt="github"
+              class="w-6 hover:scale-110"
+          /></a>
+          <a
+            href="https://t.me/bogdan_ilchenko"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/telegram.svg"
+              alt="telegram"
+              class="w-6 hover:scale-110"
+          /></a>
+          <a
+            href="mailto:bogdan_ilchenko@ukr.net"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            ><img
+              src="/assets/images/icons/email.svg"
+              alt="email"
+              class="w-8 hover:scale-110"
+          /></a>
+        </div>
+        <p class="mt-4 text-gray-500">© 2025 All rights reserved</p>
+      </div>
+    </footer>
+
+    <script>
+      const terminal = document.getElementById("terminal");
+
+      const lines = [
+        "> show name",
+        "Bogdan Ilchenko",
+        "Graduated from KPI, worked in SEO, transitioned to development.",
+        "Currently at Pixoram working with React, Tailwind, WordPress.",
+        "",
+        "> show skills",
+        "HTML5/CSS3/SASS   React   Redux   Next.js   Zustand",
+        "TypeScript   WordPress   Git   Vite   Jest",
+        "",
+        "> show languages",
+        "English - Upper-Intermediate",
+        "Ukrainian - Native",
+        "",
+        "> _",
+      ];
+
+      let lineIndex = 0;
+      let charIndex = 0;
+      let currentLine = "";
+      const typingSpeed = 25;
+
+      function typeLine() {
+        if (lineIndex >= lines.length) return;
+
+        const fullLine = lines[lineIndex];
+        currentLine += fullLine[charIndex] || "";
+
+        terminal.innerHTML = terminal.innerHTML
+          .replace(/<span class="blinking-cursor"><\/span>/, "")
+          .replace(/_$/, "");
+
+        terminal.innerHTML += fullLine[charIndex] || "";
+        terminal.innerHTML += '<span class="blinking-cursor"></span>';
+
+        charIndex++;
+
+        if (charIndex < fullLine.length) {
+          setTimeout(typeLine, typingSpeed);
+        } else {
+          terminal.innerHTML =
+            terminal.innerHTML.replace(
+              '<span class="blinking-cursor"></span>',
+              ""
+            ) + "\n";
+          currentLine = "";
+          charIndex = 0;
+          lineIndex++;
+          setTimeout(typeLine, 400);
+        }
+      }
+
+      typeLine();
+    </script>
+  </body>
+</html>
