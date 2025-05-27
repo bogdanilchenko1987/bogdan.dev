@@ -45,7 +45,7 @@
     </header>
 
     <!-- Main Section -->
-    <main class="flex items-center justify-center">
+    <main class="flex items-center justify-center px-4">
       <!-- Back-end variant -->
 
       <!-- <form
@@ -120,7 +120,7 @@
         name="contact"
         method="POST"
         action="#"
-        class="relative border-8 border-green-800 p-6 rounded-lg grid gap-8 md:flex-1 md:max-w-lg my-4 md:my-12 lg:my-16 bg-white dark:bg-neutral-800 w-full"
+        class="relative border-8 border-green-800 p-6 rounded-lg grid gap-8 md:flex-1 md:max-w-lg my-4 md:my-12 lg:my-16 bg-white w-full"
       >
         <p class="text-lg font-semibold underline">I'm open for a new job!</p>
         <h2 id="contact" class="text-3xl font-bold">Let's Connect</h2>
@@ -132,11 +132,11 @@
             name="name"
             placeholder="Your Name"
             required
-            class="peer w-full py-2 border-4 border-grey-900 rounded-md focus:ring-2 dark:focus:ring-offset-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent"
+            class="peer w-full py-2 border-4 border-grey-900 rounded-md focus:ring-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none placeholder-transparent"
           />
           <label
             for="name"
-            class="text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"
+            class="text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600"
             >Your Name</label
           >
         </div>
@@ -148,11 +148,11 @@
             name="email"
             placeholder="Your Email"
             required
-            class="peer w-full py-2 border-4 border-grey-900 rounded-md focus:ring-2 dark:focus:ring-offset-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent"
+            class="peer w-full py-2 border-4 border-grey-900 rounded-md focus:ring-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none placeholder-transparent"
           />
           <label
             for="email"
-            class="text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"
+            class="text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600"
             >Your Email</label
           >
         </div>
@@ -165,11 +165,11 @@
             rows="5"
             placeholder="Offer me a job?"
             required
-            class="peer form-textarea resize-none w-full border-4 border-grey-900 rounded-md focus:ring-2 dark:focus:ring-offset-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent"
+            class="peer form-textarea resize-none w-full border-4 border-grey-900 rounded-md focus:ring-2 focus:ring-grey-900 focus:border-grey-900 focus:outline-none placeholder-transparent"
           ></textarea>
           <label
             for="content"
-            class="text-neutral-500 text-sm font-bold uppercase absolute -top-3 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-6 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"
+            class="text-neutral-500 text-sm font-bold uppercase absolute -top-3 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-6 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600"
             >Offer me a job?</label
           >
         </div>
@@ -182,22 +182,7 @@
         </button>
       </form>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const form = document.querySelector('form[name="contact"]');
-          if (!form) return;
-
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            form.reset();
-
-            setTimeout(() => {
-              window.location.href = "/thanks/";
-            }, 500);
-          });
-        });
-      </script>
+      
     </main>
 
     <!-- Footer -->
@@ -244,5 +229,6 @@
         <p class="mt-4 text-gray-500">© 2025 All rights reserved</p>
       </div>
     </footer>
+    <script src="/assets/js/form.js"></script>
   </body>
 </html>

@@ -91,6 +91,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/fantasysportsnordic-com.jpg"
                       alt="card1"
                     />
@@ -156,6 +157,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/spintesoro-com.jpg"
                       alt="card1"
                     />
@@ -220,6 +222,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/apespeednft-com.jpg"
                       alt="card"
                     />
@@ -283,6 +286,7 @@
                 <div class="relative">
                   <img
                     class="w-full"
+                    loading="lazy"
                     src="/assets/images/projects/hightupcricket-com.jpg"
                     alt="card"
                   />
@@ -348,6 +352,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/ukcasinosguide-com.jpg"
                       alt="card"
                     />
@@ -413,6 +418,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/spinzielona-com.jpg"
                       alt="card"
                     />
@@ -478,6 +484,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/spielsberg-com.jpg"
                       alt="card"
                     />
@@ -537,6 +544,7 @@
                 <div class="relative">
                   <img
                     class="w-full"
+                    loading="lazy"
                     src="/assets/images/projects/trustshopindia-site.jpg"
                     alt="card"
                   />
@@ -602,6 +610,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/winslane-com.jpg"
                       alt="card"
                     />
@@ -667,6 +676,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/batkickring-com.jpg"
                       alt="card"
                     />
@@ -736,6 +746,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/winsespirit-com.jpg"
                       alt="card"
                     />
@@ -805,6 +816,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/stakebitehunt-site.jpg"
                       alt="card"
                     />
@@ -865,6 +877,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/femelyflex-com.jpg"
                       alt="card"
                     />
@@ -931,6 +944,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/nyerotura-com.jpg"
                       alt="card"
                     />
@@ -996,6 +1010,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/makestyle-site.jpg"
                       alt="card"
                     />
@@ -1057,6 +1072,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/kazina-hr2025-com.jpg"
                       alt="card"
                     />
@@ -1123,6 +1139,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/jetekbajnok-com.jpg"
                       alt="card"
                     />
@@ -1189,6 +1206,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/aussieautowash-com.jpg"
                       alt="card"
                     />
@@ -1253,6 +1271,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/casinoking-uk-com.jpg"
                       alt="card"
                     />
@@ -1318,6 +1337,7 @@
                   >
                     <img
                       class="w-full"
+                      loading="lazy"
                       src="/assets/images/projects/funkelspiel-com.jpg"
                       alt="card"
                     />
@@ -1428,44 +1448,6 @@
       </div>
     </footer>
 
-    <script>
-      const buttons = document.querySelectorAll(".filter-btn");
-      const cards = document.querySelectorAll(".card");
-
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const selectedCategory = button.getAttribute("data-category");
-
-          // Зміна стилю активної кнопки
-          buttons.forEach((btn) => {
-            btn.classList.remove(
-              "text-green-600",
-              "border-b-2",
-              "border-green-600"
-            );
-            btn.classList.add("text-gray-600");
-          });
-          button.classList.remove("text-gray-600");
-          button.classList.add(
-            "text-green-600",
-            "border-b-2",
-            "border-green-600"
-          );
-
-          // Фільтрація карток
-          cards.forEach((card) => {
-            const cardCategory = card.getAttribute("data-category");
-            if (
-              selectedCategory === "all" ||
-              cardCategory === selectedCategory
-            ) {
-              card.classList.remove("hidden");
-            } else {
-              card.classList.add("hidden");
-            }
-          });
-        });
-      });
-    </script>
+    <script src="/assets/js/project-filter.js"></script>
   </body>
 </html>

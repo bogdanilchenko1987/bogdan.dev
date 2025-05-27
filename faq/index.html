@@ -49,7 +49,7 @@
     <main>
       <div class="relative isolate overflow-hidden bg-custom">
         <div
-          class="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12"
+          class="py-12 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12"
         >
           <div class="flex flex-col text-left basis-1/2">
             <h1 class="sm:text-4xl text-3xl font-extrabold text-base-content">
@@ -73,38 +73,34 @@
               Questions
             </h1>
           </div>
+
           <ul class="basis-1/2">
-            <!-- Question 1 -->
-            <li class="group">
+            <!-- Question 1 (clickable) -->
+            <li class="faq-item border-t border-base-content/10">
               <button
-                class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+                class="faq-toggle relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left md:text-lg"
+                onclick="this.classList.toggle('open'); var content = this.nextElementSibling; content.classList.toggle('max-h-60');"
               >
                 <span class="flex-1 text-base-content"
                   >Where are you currently located?</span
                 >
                 <svg
-                  class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                  class="flex-shrink-0 w-4 h-4 ml-auto transition-transform duration-300"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <rect y="7" width="16" height="2" rx="1" />
                   <rect
                     y="7"
                     width="16"
                     height="2"
                     rx="1"
-                    class="transform origin-center transition duration-200 ease-out"
-                  ></rect>
-                  <rect
-                    y="7"
-                    width="16"
-                    height="2"
-                    rx="1"
-                    class="group-hover:opacity-0 origin-center rotate-90 transition duration-200 ease-out"
-                  ></rect>
+                    class="rotate-90 origin-center"
+                  />
                 </svg>
               </button>
               <div
-                class="transition-all duration-300 ease-in-out group-hover:max-h-60 max-h-0 overflow-hidden"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
                 <div class="pb-5 leading-relaxed">
                   I'm currently based in Kyiv, Ukraine. However, I'm open to
@@ -112,39 +108,33 @@
                 </div>
               </div>
             </li>
-
-            <!-- Question 2 -->
-            <li class="group">
+            <!-- Question 2 (clickable) -->
+            <li class="faq-item border-t border-base-content/10">
               <button
-                class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+                class="faq-toggle relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left md:text-lg"
+                onclick="this.classList.toggle('open'); var content = this.nextElementSibling; content.classList.toggle('max-h-60');"
               >
-                <span class="flex-1 text-base-content"
-                  >How much professional experience do you have in frontend
-                  development?</span
-                >
+                <span class="flex-1 text-base-content">
+                  How much professional experience do you have in frontend
+                  development?
+                </span>
                 <svg
-                  class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                  class="flex-shrink-0 w-4 h-4 ml-auto transition-transform duration-300"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <rect y="7" width="16" height="2" rx="1" />
                   <rect
                     y="7"
                     width="16"
                     height="2"
                     rx="1"
-                    class="transform origin-center transition duration-200 ease-out"
-                  ></rect>
-                  <rect
-                    y="7"
-                    width="16"
-                    height="2"
-                    rx="1"
-                    class="group-hover:opacity-0 origin-center rotate-90 transition duration-200 ease-out"
-                  ></rect>
+                    class="rotate-90 origin-center"
+                  />
                 </svg>
               </button>
               <div
-                class="transition-all duration-300 ease-in-out group-hover:max-h-60 max-h-0 overflow-hidden"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
                 <div class="pb-5 leading-relaxed">
                   I have 1.5+ years of commercial experience as a frontend
@@ -153,38 +143,33 @@
               </div>
             </li>
 
-            <!-- Question 3 -->
-            <li class="group">
+            <!-- Question 3 (clickable) -->
+            <li class="faq-item border-t border-base-content/10">
               <button
-                class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+                class="faq-toggle relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left md:text-lg"
+                onclick="this.classList.toggle('open'); var content = this.nextElementSibling; content.classList.toggle('max-h-60');"
               >
-                <span class="flex-1 text-base-content"
-                  >Is your English level sufficient for communication with
-                  international teams?</span
-                >
+                <span class="flex-1 text-base-content">
+                  Is your English level sufficient for communication with
+                  international teams?
+                </span>
                 <svg
-                  class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                  class="flex-shrink-0 w-4 h-4 ml-auto transition-transform duration-300"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <rect y="7" width="16" height="2" rx="1" />
                   <rect
                     y="7"
                     width="16"
                     height="2"
                     rx="1"
-                    class="transform origin-center transition duration-200 ease-out"
-                  ></rect>
-                  <rect
-                    y="7"
-                    width="16"
-                    height="2"
-                    rx="1"
-                    class="group-hover:opacity-0 origin-center rotate-90 transition duration-200 ease-out"
-                  ></rect>
+                    class="rotate-90 origin-center"
+                  />
                 </svg>
               </button>
               <div
-                class="transition-all duration-300 ease-in-out group-hover:max-h-60 max-h-0 overflow-hidden"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
                 <div class="pb-5 leading-relaxed">
                   Yes, my English is good enough for both written and spoken
@@ -193,38 +178,32 @@
                 </div>
               </div>
             </li>
-
-            <!-- Question 4 -->
-            <li class="group">
+            <!-- Question 4 (clickable) -->
+            <li class="faq-item border-t border-base-content/10">
               <button
-                class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+                class="faq-toggle relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left md:text-lg"
+                onclick="this.classList.toggle('open'); var content = this.nextElementSibling; content.classList.toggle('max-h-60');"
               >
-                <span class="flex-1 text-base-content"
-                  >Are you open to remote work?</span
-                >
+                <span class="flex-1 text-base-content">
+                  Are you open to remote work?
+                </span>
                 <svg
-                  class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                  class="flex-shrink-0 w-4 h-4 ml-auto transition-transform duration-300"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <rect y="7" width="16" height="2" rx="1" />
                   <rect
                     y="7"
                     width="16"
                     height="2"
                     rx="1"
-                    class="transform origin-center transition duration-200 ease-out"
-                  ></rect>
-                  <rect
-                    y="7"
-                    width="16"
-                    height="2"
-                    rx="1"
-                    class="group-hover:opacity-0 origin-center rotate-90 transition duration-200 ease-out"
-                  ></rect>
+                    class="rotate-90 origin-center"
+                  />
                 </svg>
               </button>
               <div
-                class="transition-all duration-300 ease-in-out group-hover:max-h-60 max-h-0 overflow-hidden"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
                 <div class="pb-5 leading-relaxed">
                   Absolutely! I enjoy working remotely and am fully equipped for
@@ -234,37 +213,32 @@
               </div>
             </li>
 
-            <!-- Question 5 -->
-            <li class="group">
+            <!-- Question 5 (clickable) -->
+      <li class="faq-item border-t border-base-content/10">
               <button
-                class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+                class="faq-toggle relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left md:text-lg"
+                onclick="this.classList.toggle('open'); var content = this.nextElementSibling; content.classList.toggle('max-h-60');"
               >
-                <span class="flex-1 text-base-content"
-                  >What were your responsibilities in your last position?</span
-                >
+                <span class="flex-1 text-base-content">
+                  What were your responsibilities in your last position?
+                </span>
                 <svg
-                  class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                  class="flex-shrink-0 w-4 h-4 ml-auto transition-transform duration-300"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <rect y="7" width="16" height="2" rx="1" />
                   <rect
                     y="7"
                     width="16"
                     height="2"
                     rx="1"
-                    class="transform origin-center transition duration-200 ease-out"
-                  ></rect>
-                  <rect
-                    y="7"
-                    width="16"
-                    height="2"
-                    rx="1"
-                    class="group-hover:opacity-0 origin-center rotate-90 transition duration-200 ease-out"
-                  ></rect>
+                    class="rotate-90 origin-center"
+                  />
                 </svg>
               </button>
               <div
-                class="transition-all duration-300 ease-in-out group-hover:max-h-60 max-h-0 overflow-hidden"
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
                 <div class="pb-5 leading-relaxed">
                   I developed websites and UI components, optimized performance,
@@ -288,7 +262,6 @@
         </div>
       </div>
     </main>
-
     <!-- Footer -->
     <footer class="pt-10">
       <div class="container mx-auto px-16 sm:px-4 text-center">

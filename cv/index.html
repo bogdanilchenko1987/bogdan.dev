@@ -41,13 +41,6 @@
         justify-content: center;
       }
 
-      .modal {
-        transition: transform 0.5s ease-in-out;
-        transform: translateY(100%);
-      }
-      .modal.open {
-        transform: translateY(0);
-      }
     </style>
   </head>
   <body class="text-gray-900 font-sans relative">
@@ -69,22 +62,34 @@
       <nav
         class="fixed top-1/2 -translate-y-1/2 left-6 z-50 space-y-4 text-lg font-semibold"
       >
-        <a href="#summary" class="block text-gray-500 hover:text-green-700"
+        <a
+          href="#summary"
+          class="hidden sm:block text-[#03040b] font-bold hover:text-green-700"
           >Summary</a
         >
-        <a href="#skills" class="block text-gray-500 hover:text-green-700"
+        <a
+          href="#skills"
+          class="hidden sm:block text-[#03040b] font-bold hover:text-green-700"
           >Skills</a
         >
-        <a href="#languages" class="block text-gray-500 hover:text-green-700"
+        <a
+          href="#languages"
+          class="hidden sm:block text-[#03040b] font-bold hover:text-green-700"
           >Languages</a
         >
-        <a href="#experience" class="block text-gray-500 hover:text-green-700"
+        <a
+          href="#experience"
+          class="hidden sm:block text-[#03040b] font-bold hover:text-green-700"
           >Experience</a
         >
-        <a href="#education" class="block text-gray-500 hover:text-green-700"
+        <a
+          href="#education"
+          class="hidden sm:block text-[#03040b] font-bold hover:text-green-700"
           >Education</a
         >
-        <a href="#download" class="block text-gray-500 hover:text-green-700"
+        <a
+          href="#download"
+          class="hidden sm:block text-[#03040b] font-bold hover:text-green-700"
           >Download</a
         >
       </nav>
